@@ -3,520 +3,598 @@
 
 <head>
 	<meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=Edge">
-	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="shortcut icon" href="images/favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 	<title>School Food Purchase Study (SFPS IV)</title>
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="vendorlibs/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-	 crossorigin="anonymous">
-	<link rel="stylesheet" href="nsya.css">
+
+	<link rel="stylesheet" href="styles.css">
+
+	<link rel="stylesheet" href="vendorlibs/font-awesome-pro/css/all.css">
 	<link rel="stylesheet" href="vendorlibs/normalize.min.css">
 </head>
 
 <body>
-	<div class="page_nav">
-		For development purposes only, click to view:
-		<a href="index.html">Recruitment Survey - Landing page</a>
-		<a href="questionnaire.html">Survey - Internal questionnaire page</a>
-		<a href="dashboard.html">Dashboard</a>
-	</div>
-	<div class="contactUs">
-		<i class="fas fa-times" tabindex="0"></i>
-		<div class="contactUs_wrapper">
-			<h2 class="contactUs_h2">Contact us with any questions or comments about the National Study of Young Adults!</h2>
+	<header id="Home" class="d-flex align-items-center justify-content-between flex-wrap">
+		<div class="d-flex justify-content-start align-items-center logos">
+			<a href="" target="_blank">
+				<img src="images/logo_USDA.svg" class="img-fluid logo" alt="">
+			</a>
+			<div class="flip"></div>
+			<a href="" target="_blank">
+				<img src="images/logo_Westat.svg" class="img-fluid logo" alt="">
+			</a>
+			<div class="flip"></div>
+			<a href="" target="_blank">
+				<img src="images/a-logo.png" class="img-fluid logo" alt="">
+			</a>
+		</div>
 
-			<form action="">
+		<p class="green mb-0 mr-3">OMB Control No: 0584-0471</p>
 
-				<label for="name">Name</label>
-				<input type="text" id="name" name="Name">
+	</header>
 
-				<label for="email">Email*</label>
-				<input type="text" id="email" name="Email" required>
+	<!-- start contact form -->
+	<div id="slideOut" class="content-top">
 
-				Reason for Contact*
-				<div class="contactUs_radio">
-					<label for="reason_0" class="reason reason_0">
-						<input type="radio" id="reason_0" name="Reason" value="General Inquiry" checked>
-						<span class="reasonTxt">General Inquiry</span>
-					</label>
-					<label for="reason_1" class="reason reason_1">
-						<input type="radio" id="reason_1" name="Reason" value="Techinal Issue">
-						<span class="reasonTxt">Techinal Issue</span>
-					</label>
-					<label for="reason_2" class="reason reason_2">
-						<input type="radio" id="reason_2" name="Reason" value="Other">
-						<span class="reasonTxt">Other</span>
-					</label>
+		<div id="one" class="openTab" role="button" tabindex="0" aria-label="Contact">
+			<i aria-hidden="true" class="far fa-envelope"></i><span class="tabText"> Contact Us</span>
+
+		</div>
+
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="closeThisPlease" id="close">
+					<button role="button" class="close" data-dismiss="modal" id="closeThisPlease" tabindex="-1" aria-hidden="false" style="opacity:1" aria-label="Close">
+						✕
+					</button>
 				</div>
 
-				<label for="message">Message*</label>
-				<textarea id="message" name="Message" required></textarea>
 
-				<input type="submit" value="Send" class="contactUsBtn">
+				<h3 class="text-center"><i class="far fa-envelope"></i> Contact Us</h3>
 
-				<p class="contactUs_p">If you need assistance, you can contact the NSYA team by phone at <a href="tel:+18556623391">855-662-3391</a></p>
-			</form>
-			<p class="contactUs_p contactUs_p1 text-left">*Required field</p>
+
+			</div>
+			<div class="modal-body">
+
+				<p class="white small text-center mt-0">*Required Field</p>
+				<form method="post" id="theform">
+
+					<div class="form-group">
+						<label for="formControl1">Name</label>
+						<input id="formControl1" type="text" class="form-control secondOne mandatoryfields" tabindex="-1" aria-hidden="false" name="name" data-form-field="Name">
+					</div>
+					<div class="form-group">
+						<label for="formControl2">Email*</label>
+						<input type="email" id="formControl2" class="form-control required secondOne mandatoryfields" tabindex="-1" aria-hidden="false" name="email" data-form-field="Email" required>
+					</div>
+
+					<div class="form-group">
+						<fieldset>
+							<label for="general-inquiry">Reason for Contact*</label>
+							<div class="around">
+								<div class="vertical">
+									<i class="far fa-comments"></i>
+
+									<label class="radio-inline">
+										<input type="radio" name="optradio" class="required mandatoryfields checks" tabindex="0" aria-hidden="false" id="general-inquiry" required="" checked="">General Inquiry
+									</label>
+
+								</div>
+								<div class="vertical">
+									<i class="far fa-wrench"></i>
+
+									<label class="radio-inline">
+										<input type="radio" name="optradio" class="required mandatoryfields checks" tabindex="0" aria-hidden="false" required="">Technical Issue
+									</label>
+
+								</div>
+								<div class="vertical">
+									<i class="far fa-question-circle"></i>
+
+									<label class="radio-inline">
+										<input type="radio" name="optradio" class="required mandatoryfields checks" tabindex="0" aria-hidden="false" required="">Other
+									</label>
+
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<div class="form-group">
+						<label for="formControl4">Message</label>
+						<textarea class="form-control" id="formControl4" tabindex="-1" aria-hidden="false" name="message" rows="4"></textarea>
+					</div>
+
+					<div class="d-flex justify-content-center mt-3 mb-3">
+						<button type="submit" class="btn nonActive" id="sendMessage" tabindex="-1" aria-hidden="false">Send</button>
+					</div>
+
+				</form>
+
+			</div>
+
+			<div class="modal-footer">
+				<p class="white"><i class="far fa-phone"></i> Phone: XXX-XXX-XXXX</p>
+
+			</div>
+
+
 		</div>
+
 	</div>
 
 	<div class="contactUsOverlay"></div>
+	<!-- end contact form -->
 
-	<!-- 		<div class="survey-container">
-				<div class="surveysection-title">
-					<p>Start</p>
-				</div> -->
-	<!-- #Survey goes here -->
-	<!-- 			<div class="surveysection-btngrp">
-					<button class="btnSaveExit">Save and Continue Later</button>
-					<button class="btnPrevious">Previous</button>
-					<button class="btnNext">Next</button>
-				</div>
-			</div> -->
+
+
 	<div class="container-fluid overflow-hidden position-relative">
 		<div class="header-container">
-			<a href=""><img class="NSYA_logo" src="assets/nsya_Logo.svg" width="300" height="120" alt="National Study of Young Adults"></a>
+
+			<h1>Welcome to the <span class="strong">School Food Purchase Study</span> (SFPS IV)</h1>
+
 		</div>
 
 
 		<div class="hero-img">
 			<div class="landing-panel">
-				<h5 class="landing-panel-p1">Welcome to the National Study of Young Adults!</h5>
-				<p class="landing-panel-p2">To start your survey, please enter the access code which was included in your
-					invitation letter.</p>
+				<h5 class="landing-panel-p1 text-center">Study Participants</h5>
+
 				<div class="form-signin">
-					<label for="MainContent_txtAccessCode1" id="MainContent_Label1" class="form-signin-heading">Enter your Access Code
-						to
-						begin.</label>
+					<label for="MainContent_txtAccessCode1" id="MainContent_Label1" class="form-signin-heading">Enter PIN to access study activities</label>
 					<div class="position-relative form-signin-input">
-						<input name="ctl00$MainContent$txtAccessCode1" type="password" maxlength="50" size="8" id="MainContent_txtAccessCode1"
-						 class="form-control access" placeholder="Enter your Access Code" autofocus="autofocus" autocomplete="false">
-						<div class="checkbox" tabindex="0">
-							<label>
-								<input id="togglepwd" type="checkbox" value="1" onchange="showPWD()"><img src="assets/eye.svg" alt="Icon for show access code"
-								 width="16" height="16">&nbsp;&nbsp;Show Access Code
+						<input name="ctl00$MainContent$txtAccessCode1" type="password" maxlength="50" size="8" id="AccessCode"
+						class="form-control access" placeholder="Enter your PIN" autocomplete="false">
+						<div class="checkbox">
+							<label class="togglePassword" tabindex="0" aria-hidden="false" aria-label="Show/Hide Passcode">
+								<i id="eye" class="far fa-eye"></i>
+
+								<input id="togglepwd" type="checkbox" value="1"></input>
+								<span id="access">Show PIN</span>
 							</label>
 						</div>
-						<a href="#login" class="form-login-a text--blue">Already a Participant?</a>
 					</div>
-					<div class="position-relative form-login-input">
-						<input name="ctl00$MainContent$txtAccessCode1" type="username" maxlength="50" size="8" id="MainContent_txtAccessCode1"
-						 class="form-control access" placeholder="Username" autofocus="autofocus" autocomplete="false">
-						<input name="ctl00$MainContent$txtAccessCode1" type="password" maxlength="50" size="8" id="MainContent_txtAccessCode1"
-						 class="form-control access" placeholder="Password" autofocus="autofocus" autocomplete="false">
-						<div class="checkbox" tabindex="0">
-							<label>
-								<input id="togglepwd" type="checkbox" value="1" onchange="showPWD()"><img src="assets/eye.svg" alt="Icon for show access code"
-								 width="16" height="16">&nbsp;&nbsp;Show Password
-							</label>
-						</div>
-						<a href="#signin" class="form-login-a text--blue">New Participant?</a>
-						<a href="#" class="form-login-a text--blue">Forgot Password?</a>
+
+					<div class="d-flex justify-content-center mt-4">
+						<button class="btn btnBegin inactive mr-1">Submit</button>
+						<button class="btn pin inactive ml-1">Lost PIN?</button>
+
 					</div>
-					<input type="submit" name="ctl00$MainContent$btnContinue" value="Begin" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnContinue&quot;, &quot;&quot;, true, &quot;LoginUserValidationGroup&quot;, &quot;&quot;, false, false))"
-					 id="MainContent_btnContinue" class="btnBegin" onkeypress="return submitForm();">
+
 				</div>
+
 			</div>
-			<button class="btnContact" role="button" onclick="btnContact()" onkeypress="btnContact()"><img src="assets/envelope.svg"
-				 alt="Icon for Contact Us" width="18" height="18">&nbsp;&nbsp;<span>Contact Us</span></button>
+
 		</div>
 
 		<div class="menu-buttons">
 			<ul class="menu-buttons-list">
-				<li tabindex="0" data-target="#Guide">Process</li>
-				<li tabindex="0" data-target="#FAQ">FAQs</li>
-				<li tabindex="0" data-target="#Help">Help</li>
+				<li tabindex="0" data-target="#About"><i class="far fa-info-circle"></i>About</li>
+				<li tabindex="0" data-target="#Study"><i class="far fa-list-ul"></i>Study Activities</li>
+				<li tabindex="0" data-target="#FAQ"><i class="far fa-question"></i>FAQs</li>
 			</ul>
 		</div>
 
-		<div class="img-rc-container container-fluid">
-			<img class="img-rc" src="assets/img_header-corner.svg" alt="Overlay" />
-		</div>
-		<div class="img-lr-container container scrollblock">
-			<img class="img-l" src="assets/img_man-phone.svg" alt="Overlay" />
-			<img class="img-r" src="assets/img_people-chatting.svg" alt="Overlay" />
+		<div class="container-fluid">
+			<img class="img-rc" src="images/oranges.png" alt="" >
+
+
+			<img class="img-r" src="images/bananas.png" alt="" >
 		</div>
 
-		<div id="Guide" class="landing-sec container-fluid">
 
-			<div class="guide-overlay container">
-				<h2 class="landing-sec-H">Recruitment Process</h2>
-				<ul class="guide-list">
-					<li class="guide">
-						<p class="guide-list-N-768">1</p>
-						<div class="guide-wrapper">
-							<p class="guide-list-N">1</p>
-							<p class="guide-list-T text--blue"><span class="guide-list-H">Recruitment Letter</span><br>Find the access code
-								on the recruitment letter sent to you along with the $2.</p>
-							<img class="guide-list-I" src="assets/process_Step-1.svg" alt="" />
+		<div id="About" class="container-fluid">
+
+			<div class="container">
+				<h2 class="landing-sec-H">About</h2>
+				<h3 class="text-center">USDA, FNS Message about the Study</h3>
+				<div class="container">
+
+
+					<iframe class="embed-responsive-item mb-5" src="https://players.brightcove.net/1232842447001/BkS1OPjQ_default/index.html?videoId=6222240700001" allowfullscreen="" allow="encrypted-media" title="Select to play the ECLS video"></iframe>
+
+
+					<div class="whiteBubble">
+						<div class="d-flex justify-content-start align-items-center">
+							<img class="img-responsive about" src="images/about-study.svg">
+							<div class="d-flex flex-column">
+								<h3>About the Study</h3>
+								<p>The U.S. Department of Agriculture, Food and Nutrition Service conducts the School Food Purchase Study of SFAs every ten years or so. Selected SFAs provide information on their procurement practices and submit food purchase data for one selected quarter (three months)</p>
+								<p>In the decade since the prior study (SFPS III), the school nutrition environment has undergone considerable changes including updated nutrition standards for school meals and standards for school meals and standards for competitive foods. These changes have affected the purchasing practices of SFAs intermsof the types, volume, and cost of foods.</p>
+
+								<p>Findings from the study will provide information on purchasing practices that promote efficiencies. This information may be especially useful to SFAs, food vendors and food service management companies as they strive to continually improve school meals.</p>
+								<p>A nationally representative sample of 630 SFAs will be invited to take part in the study. After completing all data collection activities, SFAs will receive $300. SFAs are encouraged to use it towards attendance at a conference or other professional development opportunity.</p>
+							</div>
 						</div>
-					</li>
-					<li class="guide">
-						<p class="guide-list-N-768">2</p>
-						<div class="guide-wrapper">
-							<img class="guide-list-I" src="assets/process_Step-2.svg" alt="" />
-							<p class="guide-list-N">2</p>
-							<p class="guide-list-T text--blue"><span class="guide-list-H">Access Code</span><br>Enter access code above and
-								press “Begin”. You will then be instructed to
-								create a username and password.</p>
+					</div>
+
+					<div class="whiteBubble">
+
+
+						<div class="d-flex flex-column">
+							<h3 class="text-center">SFPS III Findings</h3>
+							<h4 class="text-center">In 2009/2010, SFAs purchased foods...</h4>
+
 						</div>
-					</li>
-					<li class="guide">
-						<p class="guide-list-N-768">3</p>
-						<div class="guide-wrapper">
-							<p class="guide-list-N">3</p>
-							<p class="guide-list-T text--blue"><span class="guide-list-H">Navigate</span><br>Answer the questions to the
-								best of your ability. Use the next or back button
-								to go between questions.</p>
-							<img class="guide-list-I" src="assets/process_Step-3.svg" alt="" />
+
+						<div class="row mt-3">
+							<div class="col-lg-4 col-md-12 col-sm-12">
+								<div class="d-flex flex-column align-items-center">
+									<img class="img-responsive chart" src="images/left-chart.svg">
+									<h5 class="text-center mb-0">...worth</h5>
+									<h2 class="text-center">$8.5 Billion</h2>
+
+								</div>
+
+							</div>
+							<div class="col-lg-4 col-md-12 col-sm-12">
+								<div class="d-flex flex-column align-items-center">
+									<img class="img-responsive chart" src="images/middle-chart.svg">
+									<ul class="codes one">
+										<li><span></span>Commercial</li>
+										<li><span></span>USDA Foods</li>
+										<li><span></span>Processed USDA Foods</li>
+
+									</ul>
+
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-12 col-sm-12">
+								<div class="d-flex flex-column align-items-center">
+									<img class="img-responsive chart" src="images/right-chart.svg">
+
+									<div class="d-flex justify-content-center mobileAcross">
+										<ul class="codes two">
+											<li><span></span>Milk & Dairy</li>
+											<li><span></span>Fruits/Juices</li>
+											<li><span></span>Prepared Foods</li>
+											<li><span></span>Red Meats</li>
+										</ul>
+										<ul class="codes three">
+											<li><span></span>Bakery</li>
+											<li><span></span>Poultry</li>
+											<li><span></span>Vegetables</li>
+											<li><span></span>Other</li>
+										</ul>
+
+
+									</div>
+
+								</div>
+							</div>
+
+
 						</div>
-					</li>
-					<li class="guide">
-						<p class="guide-list-N-768">4</p>
-						<div class="guide-wrapper">
-							<img class="guide-list-I" src="assets/process_Step-4.svg" alt="" />
-							<p class="guide-list-N">4</p>
-							<p class="guide-list-T text--blue"><span class="guide-list-H">Submit Survey</span><br>When you have completed
-								the survey, click “submit”. Then check out your
-								survey dashboard to see the rewards that you earned!</p>
-						</div>
-					</li>
-					<li class="guide">
-						<p class="guide-list-N-768">5</p>
-						<div class="guide-wrapper">
-							<p class="guide-list-N">5</p>
-							<p class="guide-list-T text--blue"><span class="guide-list-H">Additional Surveys</span><br>Keep an eye out for
-								future invitations that invite you to update your contact
-								information and participate in additional surveys.</p>
-							<img class="guide-list-I" src="assets/process_Step-5.svg" alt="" />
-						</div>
-					</li>
-				</ul>
-				<img class="img-r" src="assets/img_woman-book.svg" alt="Overlay" />
+
+						<div class="blueBubble">SFPS III Final Report&nbsp;<i class="far fa-download"></i></div>
+
+					</div>
+
+
+				</div>
+
 			</div>
+
+			<div class="container-fluid">
+				<img class="img-left" src="images/bread.png" alt="">
+
+			</div>
+
+			<div class="absoluteImage">
+
+			</div>
+
+			<div class="absoluteImage2">
+
+			</div>
+
 		</div>
-		<div id="FAQ" class="landing-sec">
+
+		<div id="Study" class="container-fluid">
+
+			<div class="container">
+				<h2 class="landing-sec-H">Study Activities</h2>
+				<h3 class="text-center">Selected SFAs will...</h3>
+				<div class="container">
+
+					<ul class="guide-list">
+
+						<li class="guide">
+
+							<div class="guide-wrapper">
+								<img class="guide-list-I" src="images/webinar.svg" alt="" />
+
+								<p class="guide-list-T text--blue">1. Attend a study overview webinar and a food purchase data submission webinar</p>
+							</div>
+						</li>
+						<li class="guide">
+
+							<div class="guide-wrapper">
+								<p class="guide-list-T text--blue">2. Complete the web-based Survey of Food Purchase Practices.<br>
+									<b>Survey <i class="far fa-file-pdf"></i> | Q program data <i class="far fa-file-pdf"></i></b>
+								</p>
+								<img class="guide-list-I" src="images/web.svg" alt="" />
+							</div>
+						</li>
+						<li class="guide">
+
+							<div class="guide-wrapper">
+								<img class="guide-list-I" src="images/submit.svg" alt="" />
+
+								<p class="guide-list-T text--blue">3. Submit detailed food purchase records for one quarter. SFAs may upload velocity reports, vendor invoices, or vendor summaries. <b>Example report <i class="far fa-images"></i></b></p>
+							</div>
+						</li>
+						<li class="guide">
+
+							<div class="guide-wrapper">
+
+								<p class="guide-list-T text--blue">4. Once consolidated by Westat, review the purchase summaries and flag foods used in reimbursable meals and a la carte.</p>
+								<img class="guide-list-I" src="images/money.svg" alt="" />
+							</div>
+						</li>
+
+						<li class="guide">
+
+							<div class="guide-wrapper">
+								<img class="guide-list-I" src="images/quarter.svg" alt="" />
+								<p class="guide-list-T text--blue">5. Complete the short web-based Quarterly Program Data Survey.</p>
+
+							</div>
+						</li>
+					</ul>
+
+
+				</div>
+
+			</div>
+
+			<div class="container-fluid">
+				<img class="img-right" src="images/apples.png" alt="">
+
+			</div>
+
+
+		</div>
+
+
+
+
+
+		<div id="FAQ" class="container-fluid">
 			<div class="container">
 				<h2 class="landing-sec-H alt">FAQs</h2>
-				<div class="faq-list">
-					<a class="ques" data-toggle="collapse" href="#an0s" aria-expanded="false" aria-controls="an0s">
-						<i class="fas fa-question iques"></i>Why was I selected?
-						<span class="caret-down">▾</span>
-					</a>
-					<div class="collapse" id="an0s">
-						<div class="ans">
-							Your address was randomly selected from all addresses in the country. Because we cannot invite all households to
-							participate, you represent other households that were not selected.
+
+				<div id="accordion">
+
+					<div class="card faq-list">
+
+						<div class="category"></div>
+						<a class="card-link card-header ques noDecoration" data-toggle="collapse" href="#accord1">
+
+							<h3>What is the School Food Purchase Study (SFPS)?</h3>
+							<span class="caret-down"><i class="fal fa-angle-down"></i></span>
+						</a>
+						<div id="accord1" class="panel-collapse collapse" data-parent="#accordion">
+							<div class="card-body ans">
+								<p>The School Food Purchase Study IV (SFPS-IV) is the fourth in a series of U.S. Department of Agriculture, Food and Nutrition Service (USDA, FNS) studies on food purchases made for the National School Lunch Program (NSLP) and School Breakfast Program (SBP), known collectively as the school meal programs. Prior food purchase studies were conducted in School Year (SY) 1984-1985, SY 1996-1997 and SY 2009-2010.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="faq-list">
-					<a class="ques" data-toggle="collapse" href="#an1s" aria-expanded="false" aria-controls="an1s">
-						<i class="fas fa-question iques"></i>What is the purpose of this study?
-						<span class="caret-down">▾</span>
-					</a>
-					<div class="collapse" id="an1s">
-						<div class="ans">
-							The goal of this study is to learn about the experiences of young people as they transition into adulthood.
+					<div class="card faq-list">
+						<div class="category"></div>
+						<a class="card-link card-header ques noDecoration" data-toggle="collapse" href="#accord2">
+
+							<h3>What is the purpose of the School Food Purchase Study IV?</h3>
+							<span class="caret-down"><i class="fal fa-angle-down"></i></span>
+						</a>
+						<div id="accord2" class="panel-collapse collapse" data-parent="#accordion">
+							<div class="card-body ans">
+								<p>USDA is conducting this study to obtain updated national estimates of food acquisitions and a description and analysis of food purchase practices of SFAs in the school meal programs. The estimates will provide information on the type, volume and source of foods acquired (USDA Foods and commercial products), the relative importance of USDA Foods, and changes in food acquisitions and costs over time. </p>
+								<p>The results will provide current information about how Federally sponsored school meal programs are operating since the last study more than 10 years ago. Information about food buying eiciencies will be useful for SFAs as they strive to maximize available resources and improve food service operations. Food purchase data may also be used to help determine future USDA Foods oerings.</p>
+								<p>The study will supplement data provided by SFAs with those gathered from State Directors (State Distributing Agencies). Additional information about this study is available at <a href="http://purchasestudy.com/" target="_blank">www.PurchaseStudy.com</a></p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="faq-list">
-					<a class="ques" data-toggle="collapse" href="#an2s" aria-expanded="false" aria-controls="an2s">
-						<i class="fas fa-question iques"></i>Who is behind this study?
-						<span class="caret-down">▾</span>
-					</a>
-					<div class="collapse" id="an2s">
-						<div class="ans">
-							This study is sponsored by the National Institute of Justice (NIJ), part of the U.S. Department of Justice. It
-							is being conducted by Westat, a social science research organization and New York University.
+					<div class="card faq-list">
+						<div class="category"></div>
+						<a class="card-link card-header ques" data-toggle="collapse" href="#accord3">
+
+							<h3>Who is invited to participate in the School Food Purchase Study IV?</h3>
+							<span class="caret-down"><i class="fal fa-angle-down"></i></span>
+						</a>
+						<div id="accord3" class="panel-collapse collapse" data-parent="#accordion">
+							<div class="card-body ans">
+
+								<p>About 600 SFAs were selected randomly from a list of all public SFAs that participate in the school meal programs. Your SFA is part of a nationally representative sample. By taking part in this study, you represent many SFAs like yours across the country. Your experiences are extremely valuable to USDA, FNS as it continues to provide USDA Foods and procurement guidance to SFAs.</p>
+
+
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="faq-list">
-					<a class="ques" data-toggle="collapse" href="#an3s" aria-expanded="false" aria-controls="an3s">
-						<i class="fas fa-question iques"></i>What would we like the young adult to do?
-						<span class="caret-down">▾</span>
-					</a>
-					<div class="collapse" id="an3s">
-						<div class="ans">
-							Participation involves agreeing to complete a 10-minute survey. Before they fill out the survey, the young adult
-							will be told what is on the survey and that they can decline to participate. The young adult will receive a
-							$[20/30] Amazon gift card as a thank-you for completing the survey.<br>The NSYA will continue for another year.
-							After completing this survey, we will ask the young person to participate in future surveys and other
-							activities. The young person will receive additional gift cards for participating in future activities.
+					<div class="card faq-list">
+						<div class="category blue"></div>
+						<a class="card-link card-header ques" data-toggle="collapse" href="#accord4">
+
+							<h3>Do I have to participate?</h3>
+							<span class="caret-down"><i class="fal fa-angle-down"></i></span>
+						</a>
+						<div id="accord4" class="panel-collapse collapse" data-parent="#accordion">
+							<div class="card-body ans">
+								<p>While the participation of individuals in the study is voluntary, the Healthy, Hunger-Free Kids Act of 2010 requires SFAs participating in the school meal programs to cooperate with USDA studies:</p>
+								<p>“States, State educational agencies, local educational agencies, schools, institutions, facilities, and contractors participating in programs authorized under this Act and the Child Nutrition Act of 1966 (42 U.S.C 1771 et seq.) shall cooperate with oicials and contractors acting on behalf of the Secretary, in the conduct of evaluations and studies under those Acts.”</p>
+								<p>We understand that your time is valuable. The data collection activities are carefully designed and were pretested so that the required information can be provided with minimal burden to you and your sta.</p>
+
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="faq-list">
-					<a class="ques" data-toggle="collapse" href="#an4s" aria-expanded="false" aria-controls="an4s">
-						<i class="fas fa-question iques"></i>What if there is more than one person at my address who is eligible?
-						<span class="caret-down">▾</span>
-					</a>
-					<div class="collapse" id="an4s">
-						<div class="ans">
-							Have one of the persons who is eligible fill out the survey, using the PIN in the letter sent to your address.
-							Ask the other eligible young adults to call this toll free number <a href="tel:+18556623391">855-662-3391</a>
-							and we will provide additional
-							PINs to take the survey.
+					<div class="card faq-list">
+						<div class="category"></div>
+						<a class="card-link card-header ques" data-toggle="collapse" href="#accord5">
+
+							<h3>What will I have to do?</h3>
+							<span class="caret-down"><i class="fal fa-angle-down"></i></span>
+						</a>
+						<div id="accord5" class="panel-collapse collapse" data-parent="#accordion">
+							<div class="card-body ans">
+								<p>As a study participant, you will be asked to:</p>
+								<ul>
+									<li>Participate in a Study Overview Webinar or view the webinar recording available on the study website. This 1-hour webinar will review study activities and how study results are used, prepare you to complete the study survey, and review the various study resources available to support you</li>
+									<li>Complete an online Survey of Food Purchase Practices at the beginning of the study in SY 2020-2021. The survey will take about 90 minutes to complete. We will provide you with a list of documents you will need to complete the survey, and a PDF copy of the Survey for reference. You can complete the survey in multiple sessions and resume from where you left off.</li>
+
+									<li>Participate in a Food Purchase Data Webinar or view the webinar recording available on the study website. This 1-hour webinar will provide information on the data elements needed for the food purchase study, provide examples, and include time to address questions from SFAs.</li>
+									<li>Submit details for food purchases made in one quarter along with meal counts and total food expenditure and revenue data for the same quarter. Depending on your recordkeeping systems, this activity will take about 5 hours. You can upload multiple files in a form that is easiest for you.</li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="faq-list">
-					<a class="ques" data-toggle="collapse" href="#an5s" aria-expanded="false" aria-controls="an5s">
-						<i class="fas fa-question iques"></i>Am I required to participate?
-						<span class="caret-down">▾</span>
-					</a>
-					<div class="collapse" id="an5s">
-						<div class="ans">
-							No – participation in voluntary. However, this study collects information which may help policymakers and
-							ultimately may benefit young adults. That’s very important, so we hope you will want to participate.
+					<div class="card faq-list">
+						<div class="category"></div>
+						<a class="card-link card-header ques" data-toggle="collapse" href="#accord6">
+
+							<h3>Who approved this study?</h3>
+							<span class="caret-down"><i class="fal fa-angle-down"></i></span>
+						</a>
+						<div id="accord6" class="panel-collapse collapse" data-parent="#accordion">
+							<div class="card-body ans">
+
+								<p>This study has been approved by the Oice of Management and Budget (OMB), the oice that reviews all Federally-sponsored surveys. The OMB approval number for this study is 0584-0471.</p>
+								<p>The study also has been approved by committees that protect human research subjects at Westat.</p>
+								<p>The School Nutrition Association (SNA) and the American Commodity Distribution Association (ACDA) provided letters of support for the study.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="faq-list">
-					<a class="ques" data-toggle="collapse" href="#an6s" aria-expanded="false" aria-controls="an6s">
-						<i class="fas fa-question iques"></i>Will I ever be identified? Will my answers be kept confidential?
-						<span class="caret-down">▾</span>
-					</a>
-					<div class="collapse" id="an6s">
-						<div class="ans">
-							All information obtained during this study will be treated as confidential. Your answers will be combined with
-							responses from other study participants when writing up reports and conducting analyses. The data are collected
-							under federal statute (42 U.S.C. § 3789g and 28 CFR Part 22) meaning we cannot release your answers if we get
-							any request from a government agency, private organization or individual.
+
+
+					<div class="card faq-list">
+						<div class="category"></div>
+						<a class="card-link card-header ques" data-toggle="collapse" href="#accord7">
+
+							<h3>How does USDA, FNS protect the privacy of information that is provided?</h3>
+							<span class="caret-down"><i class="fal fa-angle-down"></i></span>
+						</a>
+						<div id="accord7" class="panel-collapse collapse" data-parent="#accordion">
+							<div class="card-body ans">
+								<p>UDSA, FNS and the study team from Westat and its partner in the study, Agralytica, will use your responses only for statistical and descriptive purposes, including summary tabulations.</p>
+								<p>Your responses will not be disclosed or used in identifiable form for any other purpose unless otherwise compelled by law. This means that SFA responses will be identifiable to the Westat/Agralytica Study Team; however, your personal information (name, telephone number, etc.) will be kept private and the responses you provide will not be associated with your personal information.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="faq-list">
-					<a class="ques" data-toggle="collapse" href="#an7s" aria-expanded="false" aria-controls="an7s">
-						<i class="fas fa-question iques"></i>What if I don’t have any young adults in my household?
-						<span class="caret-down">▾</span>
-					</a>
-					<div class="collapse" id="an7s">
-						<div class="ans">
-							Please use the PIN in your invitation letter to log in to the website and let us know. You will receive a $5
-							Amazon gift code for providing us with this information.
+
+
+					<div class="card faq-list">
+						<div class="category"></div>
+						<a class="card-link card-header ques" data-toggle="collapse" href="#accord8">
+
+							<h3>Will I be paid for my participation?</h3>
+							<span class="caret-down"><i class="fal fa-angle-down"></i></span>
+						</a>
+						<div id="accord8" class="panel-collapse collapse" data-parent="#accordion">
+							<div class="card-body ans">
+								<p>We will mail your SFA a check for $300 aer you have completed all study activities. We encourage you to use it towards attendance at a conference or other professional development activities. </p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="faq-list">
-					<a class="ques" data-toggle="collapse" href="#an8s" aria-expanded="false" aria-controls="an8s">
-						<i class="fas fa-question iques"></i>I still have questions.
-						<span class="caret-down">▾</span>
-					</a>
-					<div class="collapse" id="an8s">
-						<div class="ans">
-							We are happy to talk with you. If you have any questions, please contact our study team at
-							<a href="mailto:Support@NationalStudyofYoungAdults.com">Support@NationalStudyofYoungAdults.com</a> or <a href="tel:+18556623391">855-662-3391</a>.
-							If you have questions about your rights and welfare as a research participant, please call the Westat Human
-							Subjects Protections office at 888-920-7631. If no one is available to take your call, please leave a message
-							with your full name, the name of the research study that you are calling about (The National Study of Young
-							Adults), and a phone number beginning with the area code. Someone will return your call as soon as possible.
+
+
+
+					<div class="card faq-list">
+						<div class="category"></div>
+						<a class="card-link card-header ques" data-toggle="collapse" href="#accord9">
+
+							<h3>Are there any costs to me to take part in the study?</h3>
+							<span class="caret-down"><i class="fal fa-angle-down"></i></span>
+						</a>
+						<div id="accord9" class="panel-collapse collapse" data-parent="#accordion">
+							<div class="card-body ans">
+								<p>No, there are no costs to you to take part in the study.
+									<p>You will complete the online Survey of Food Purchase Practices and upload the purchase data to the secure study website. You do not have to travel anywhere to take part in the study. </p>
+								</div>
+							</div>
 						</div>
+
+
+
+						<div class="card faq-list">
+							<div class="category"></div>
+							<a class="card-link card-header ques" data-toggle="collapse" href="#accord10">
+
+								<h3>If I use my computer to participate in this study, will I be at risk of identity theft, viruses or spam?</h3>
+								<span class="caret-down"><i class="fal fa-angle-down"></i></span>
+							</a>
+							<div id="accord10" class="panel-collapse collapse" data-parent="#accordion">
+								<div class="card-body ans">
+									<p>No, your online interactions with the study website will take place on a secure website.</p>
+									<p>Other parties will not be able to access your information or your computer.</p>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="card faq-list">
+							<div class="category"></div>
+							<a class="card-link card-header ques" data-toggle="collapse" href="#accord11">
+
+								<h3>Who do I call if I have questions?</h3>
+								<span class="caret-down"><i class="fal fa-angle-down"></i></span>
+							</a>
+							<div id="accord11" class="panel-collapse collapse" data-parent="#accordion">
+								<div class="card-body ans">
+									<p>You may reach the Technical Assistance Center by calling, XXX-XXX-XXXX or emailing PurchaseStudy@westat.com. By phone, the TAC is available weekdays from 9am to 4pm EST and the message line is available 24/7, with responses provided the following business day.</p>
+								</div>
+							</div>
+						</div>
+
 					</div>
+
+
 				</div>
+
+				<div class="absoluteImage3">
+
+				</div>
+
+				<div class="absoluteImage4">
+
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<img class="img-left2" src="images/food.png" alt="">
+
+			</div>
+
+
+			<div class="menu-buttons-floating">
+				<ul class="menu-buttons-floating-list">
+					<li tabindex="0" data-target="#Home"><i class="fas fa-angle-up"></i></li>
+					<li tabindex="0" data-target="#About"><i class="far fa-info-circle"></i></li>
+					<li tabindex="0" data-target="#Study"><i class="far fa-list-ul"></i></li>
+					<li tabindex="0" data-target="#FAQ"><i class="far fa-question"></i></li>
+
+				</ul>
+			</div>
+
+			<div class="survey-footer">
+				<p class="white mb-0">Exp. MM/DD/YYYY</p>
+
 			</div>
 		</div>
-		<div id="Help" class="landing-sec">
-			<div class="help_text_wrapper container">
-				<h2 class="landing-sec-H">Help</h2>
-				<p class="help-P">If you need assistance, you can contact the NSYA team by phone at <a href="tel:+18556623391">855-662-3391</a>
-					<br>or by email at <a href="mailto:Support@NationalStudyofYoungAdults.com">Support@NationalStudyofYoungAdults.com</a></p>
-			</div>
-			<div class="footer-img">
-				<div class="container">
-					<img class="" src="assets/img_Footer-people-only.svg" alt="Overlay" />
-				</div>
-			</div>
-		</div>
-		<div class="menu-buttons-floating">
-			<ul class="menu-buttons-floating-list">
-				<li tabindex="0" data-target="#Guide"><i class="fas fa-list-ol"></i></li>
-				<li tabindex="0" data-target="#FAQ"><i class="fas fa-question"></i></li>
-				<li tabindex="0" data-target="#Help"><i class="fas fa-phone"></i></li>
-				<li tabindex="0" data-target="#Home"><i class="fas fa-angle-up"></i></li>
+
+		<div class="menu-buttons-768">
+			<ul class="menu-buttons-768-list">
+
+				<li tabindex="0" data-target="#About"><i class="far fa-info-circle"></i><span>About</span></li>
+				<li tabindex="0" data-target="#Study"><i class="far fa-list-ul"></i><span>Study<br>Activities</span></li>
+				<li tabindex="0" data-target="#FAQ"><i class="far fa-question"></i><span>FAQ</span></li>
+				<li tabindex="0" data-target="#Home"><i class="fas fa-angle-up"></i><span>TOP</span></li>
 			</ul>
 		</div>
-		<div class="survey-footer">
-			<div class="container">
-				<a href="" target="_blank" title="Westat">
-					<img src="assets/logo_Westat.svg" alt="Westat Logo">
-				</a>
-				<a href="" target="_blank" title="NIJ">
-					<img src="assets/logo_NIJ.svg" alt="NIJ Logo">
-				</a>
-				<a href="" target="_blank" title="NYU">
-					<img src="assets/logo_NYU.png" alt="NYU Logo">
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="menu-buttons-768">
-		<ul class="menu-buttons-768-list">
-			<li tabindex="0" data-target="#Home"><i class="fas fa-angle-up"></i><span>TO TOP</span></li>
-			<li tabindex="0" data-target="#Guide"><i class="fas fa-list-ol"></i><span>GUIDE</span></li>
-			<li tabindex="0" data-target="#FAQ"><i class="fas fa-question"></i><span>FAQ</span></li>
-			<li tabindex="0" data-target="#Help"><i class="fas fa-phone"></i><span>HELP</span></li>
-			<li tabindex="0" data-target="#Home" onclick="btnContact()" onkeypress="btnContact()"><i class="fas fa-envelope"></i><span>CONTACT</span></li>
-		</ul>
-	</div>
-	<script type="text/javascript" src="vendorlibs/jquery.min.js"></script>
-	<script type="text/javascript" src="vendorlibs/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript">
 
-		function btnContact() {
-			$('.contactUs_wrapper').height(window.innerHeight - (window.innerWidth < 768 ? 132 : 64));
-			$('.contactUs').addClass('contactUs--open');
-			$('.contactUsOverlay').show();
-			$('input, a, button, li, div.checkbox, i').attr('tabindex', -1);
-			$('.contactUs--open input, .contactUs--open textarea, .contactUs--open i').attr('tabindex', 1);
-			window.innerWidth < 768 ? $('body').css({overflow: 'hidden'}) : $('body').css({overflow: 'visible'});
-		}
+		<script type="text/javascript" src="vendorlibs/jquery.min.js"></script>
+		<script type="text/javascript" src="vendorlibs/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</body>
 
-		$('.contactUsOverlay').click(function () {
-			closeContact();
-		})
-
-		$('.contactUs .fa-times').click(function () {
-			closeContact();
-		})
-
-		$('.contactUs .fa-times').on('keypress', function () {
-			closeContact();
-		})
-
-		$('.contactUs_wrapper').height(window.innerHeight - (window.innerWidth < 768 ? 132 : 64));
-
-		function closeContact() {
-			$('.contactUs').removeClass('contactUs--open');
-			$('.contactUsOverlay').hide();
-			$('input, a, button, li, div.checkbox').attr('tabindex', 1);
-			$('.contactUs--open input, .contactUs--open textarea, .contactUs--open i').attr('tabindex', -1);
-			$('body').css({overflow: 'visible'});
-		}
-
-		function scrollfn(e) {
-			let $target = $(e),
-				offSet = e === "#Home" ? 0 : $target.offset().top;
-			$('html, body').stop().animate({
-				'scrollTop': offSet
-			}, 1200, 'swing');
-
-			// setTimeout(function(){
-			// 	$(':focus').blur();
-			// }, 1300);
-		}
-
-		$('.menu-buttons-list li, .menu-buttons-floating-list li, .menu-buttons-768-list li:not(:last-child)').on('click', function (e) {
-
-			closeContact();
-			e.preventDefault();
-			scrollfn($(this).attr('data-target'));
-		});
-
-		$('.menu-buttons-list li, .menu-buttons-floating-list li, .menu-buttons-768-list li:not(:last-child)').on('keypress', function (e) {
-			closeContact();
-			e.preventDefault();
-			scrollfn($(this).attr('data-target'));
-		});
-		$('.collapse').on('show.bs.collapse', function () {
-			$('a[href="#' + this.id + '"] .caret-down').css({
-				transform: "rotate(180deg)"
-			});
-			$('a[href="#' + this.id + '"] .iques').css({
-				opacity: "1"
-			});
-		});
-		$('.collapse').on('hide.bs.collapse', function () {
-			$('a[href="#' + this.id + '"] .caret-down').css({
-				transform: "rotate(0deg)"
-			});
-			$('a[href="#' + this.id + '"] .iques').css({
-				opacity: "0.4"
-			});
-		});
-
-
-		$('.reason input').change(function () {
-			setReasonActive();
-		})
-
-		function setReasonActive() {
-			$('.reason input').each(function () {
-				if ($(this).prop('checked')) {
-					$(this).parent().css({ backgroundColor: '#141e79' })
-				} else {
-					$(this).parent().css({ backgroundColor: 'transparent' })
-				}
-			})
-		}
-
-		setReasonActive()
-
-		$(window).scroll(function () {
-			var distanceY = window.pageYOffset || document.documentElement.scrollTop;
-			if (distanceY > 555) {
-				$('.btnContact').css({
-					top: "92px"
-				})
-				$('.menu-buttons-floating').css({
-					opacity: '1',
-					visibility: 'visible'
-				})
-			} else {
-				$('.btnContact').css({
-					top: "192px"
-				})
-				$('.menu-buttons-floating').css({
-					opacity: '0',
-					visibility: 'hidden'
-				})
-			}
-		});
-
-		function toggleBegin(el) {
-			$(el).attr('href') === '#signin' ? (
-				$('.landing-panel-p2').show(),
-				$('.form-signin-heading').text('Enter your Access Code to begin.'),
-				$('.form-login-input').hide(),
-				$('.form-signin-input').show()
-			) : (
-					$('.landing-panel-p2').hide(),
-					$('.form-signin-heading').text('Log in with your username and password.'),
-					$('.form-signin-input').hide(),
-					$('.form-login-input').show()
-				);
-		}
-
-		$('.form-login-a').on('click', function (e) {
-			toggleBegin(this);
-		})
-
-		$('.form-login-a').on('keypress', function (e) {
-			toggleBegin(this);
-		})
-
-		//For screens with width < 768px
-		function setMobileView() {
-			$('.form-signin-input .checkbox label').html($('.form-signin-input .checkbox label').html().replace('Show Access Code', ''))
-			$('.form-login-input .checkbox label').html($('.form-login-input .checkbox label').html().replace('Show Password', ''))
-		}
-
-		function setDesktopView() {
-			$('.form-signin-input .checkbox label').html().indexOf('Show') > -1 ? '' : $('.form-signin-input .checkbox label').append('Show Access Code')
-			$('.form-login-input .checkbox label').html().indexOf('Show') > -1 ? '' : $('.form-login-input .checkbox label').append('Show Password')
-		}
-
-		$(window).resize(function () {
-			if (window.innerWidth < 768) { setMobileView() } else { setDesktopView() };
-		})
-
-		$(window).ready(function () {
-			if (window.innerWidth < 768) { setMobileView() } else { setDesktopView() };
-		})
-	</script>
-</body>
-
-</html>
+	</html>
