@@ -392,6 +392,11 @@ h3{
   font-weight: 700;
 }
 
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
 .embed-responsive-item {
 
   width: 100%;
