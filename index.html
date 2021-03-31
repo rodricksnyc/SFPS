@@ -16,7 +16,7 @@
 </head>
 
 <body>
-	<header id="Home" class="d-flex align-items-center justify-content-between flex-wrap">
+	<header class="d-flex align-items-center justify-content-between flex-wrap">
 		<div class="d-flex justify-content-start align-items-center logos">
 			<a href="" target="_blank">
 				<img src="images/logo_USDA.svg" class="img-fluid logo" alt="">
@@ -74,93 +74,116 @@
 						<fieldset>
 							<label for="general-inquiry">Reason for Contact*</label>
 							<div class="around">
-								<div class="vertical">
+
+								<div class="form-check">
 									<i class="far fa-comments"></i>
-
-									<label class="radio-inline">
-										<input type="radio" name="optradio" class="required mandatoryfields checks" tabindex="0" aria-hidden="false" id="general-inquiry" required="" checked="">General Inquiry
-									</label>
-
+									<input type="radio" name="optradio" value="1" class="form-check-input required" tabindex="-1" id="val1" checked>
+									<label for="val1" class="form-check-label">General Inquiry</label>
 								</div>
-								<div class="vertical">
+								<div class="form-check">
 									<i class="far fa-wrench"></i>
-
-									<label class="radio-inline">
-										<input type="radio" name="optradio" class="required mandatoryfields checks" tabindex="0" aria-hidden="false" required="">Technical Issue
-									</label>
-
+									<input type="radio" name="optradio" value="2" class="form-check-input" tabindex="-1" id="val2">
+									<label for="val2" class="form-check-label">Technical Issue</label>
 								</div>
-								<div class="vertical">
+
+								<div class="form-check">
 									<i class="far fa-question-circle"></i>
-
-									<label class="radio-inline">
-										<input type="radio" name="optradio" class="required mandatoryfields checks" tabindex="0" aria-hidden="false" required="">Other
-									</label>
-
+									<input type="radio" name="optradio" value="3" class="form-check-input" tabindex="-1" id="val3">
+									<label for="val3" class="form-check-label">Other</label>
 								</div>
+
+
 							</div>
-						</fieldset>
-					</div>
-					<div class="form-group">
-						<label for="formControl4">Message</label>
-						<textarea class="form-control" id="formControl4" tabindex="-1" aria-hidden="false" name="message" rows="4"></textarea>
-					</div>
+							<!-- <div class="around">
+							<div class="vertical">
+							<i class="far fa-comments"></i>
 
-					<div class="d-flex justify-content-center mt-3 mb-3">
-						<button type="submit" class="btn nonActive" id="sendMessage" tabindex="-1" aria-hidden="false">Send</button>
-					</div>
+							<label class="radio-inline">
+							<input type="radio" name="optradio" class="required mandatoryfields checks" tabindex="0" aria-hidden="false" id="general-inquiry" required="" checked="">General Inquiry
+						</label>
 
-				</form>
+					</div>
+					<div class="vertical">
+					<i class="far fa-wrench"></i>
+
+					<label class="radio-inline">
+					<input type="radio" name="optradio" class="required mandatoryfields checks" tabindex="0" aria-hidden="false" required="">Technical Issue
+				</label>
 
 			</div>
+			<div class="vertical">
+			<i class="far fa-question-circle"></i>
 
-			<div class="modal-footer">
-				<p class="white"><i class="far fa-phone"></i> Phone: XXX-XXX-XXXX</p>
-
-			</div>
-
-
-		</div>
+			<label class="radio-inline">
+			<input type="radio" name="optradio" class="required mandatoryfields checks" tabindex="0" aria-hidden="false" required="">Other
+		</label>
 
 	</div>
+</div> -->
+</fieldset>
+</div>
+<div class="form-group">
+	<label for="formControl4">Message</label>
+	<textarea class="form-control" id="formControl4" tabindex="-1" aria-hidden="false" name="message" rows="4"></textarea>
+</div>
 
-	<div class="contactUsOverlay"></div>
-	<!-- end contact form -->
+<div class="d-flex justify-content-center mt-3 mb-3">
+	<button type="submit" class="btn nonActive" id="sendMessage" tabindex="-1" aria-hidden="false"><i class="far fa-envelope"></i>&nbsp;Send</button>
+</div>
+
+</form>
+
+</div>
+
+<div class="modal-footer">
+	<p class="white"><i class="far fa-phone"></i> Phone: XXX-XXX-XXXX</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+<div class="contactUsOverlay"></div>
+<!-- end contact form -->
 
 
 
-	<div class="container-fluid overflow-hidden position-relative">
-		<div class="header-container">
+<div class="container-fluid overflow-hidden position-relative">
+	<section class="block0">
+		<div class="header-container heros" id="Home">
 
 			<h1>Welcome to the <span class="strong">School Food Purchase Study</span> (SFPS IV)</h1>
 
 		</div>
+	</section>
 
 
-		<div class="hero-img">
-			<div class="landing-panel">
-				<h5 class="landing-panel-p1 text-center">Study Participants</h5>
+	<div class="hero-img">
+		<div class="landing-panel">
+			<h5 class="landing-panel-p1 text-center">Study Participants</h5>
 
-				<div class="form-signin">
-					<label for="MainContent_txtAccessCode1" id="MainContent_Label1" class="form-signin-heading">Enter PIN to access study activities</label>
-					<div class="position-relative form-signin-input">
-						<input name="ctl00$MainContent$txtAccessCode1" type="password" maxlength="50" size="8" id="AccessCode"
-						class="form-control access" placeholder="Enter your PIN" autocomplete="false">
-						<div class="checkbox">
-							<label class="togglePassword" tabindex="0" aria-hidden="false" aria-label="Show/Hide Passcode">
-								<i id="eye" class="far fa-eye"></i>
+			<div class="form-signin">
+				<label for="MainContent_txtAccessCode1" id="MainContent_Label1" class="form-signin-heading">Enter PIN to access study activities</label>
+				<div class="position-relative form-signin-input">
+					<input name="ctl00$MainContent$txtAccessCode1" type="password" maxlength="50" size="8" id="AccessCode"
+					class="form-control access" placeholder="Enter your PIN" autocomplete="false">
+					<div class="checkbox">
+						<label class="togglePassword" tabindex="0" aria-hidden="false" aria-label="Show/Hide Passcode">
+							<i id="eye" class="far fa-eye"></i>
 
-								<input id="togglepwd" type="checkbox" value="1"></input>
-								<span id="access">Show PIN</span>
-							</label>
-						</div>
+							<input id="togglepwd" type="checkbox" value="1"></input>
+							<span id="access">Show PIN</span>
+						</label>
 					</div>
 
-					<div class="d-flex justify-content-center mt-4">
-						<button class="btn btnBegin inactive mr-1">Submit</button>
-						<button class="btn pin inactive ml-1">Lost PIN?</button>
+				</div>
+				<p class="black">The PIN is included in your invitation email. If you are unable to find the PIN, please <a href="" class="link">contact us</a>.</p>
 
-					</div>
+				<div class="d-flex justify-content-center mt-4">
+					<button class="btn btnBegin inactive mr-1">Submit</button>
+					<button class="btn pin inactive ml-1">Lost PIN?</button>
 
 				</div>
 
@@ -168,23 +191,25 @@
 
 		</div>
 
-		<div class="menu-buttons">
-			<ul class="menu-buttons-list">
-				<li tabindex="0" data-target="#About"><i class="far fa-info-circle"></i>About</li>
-				<li tabindex="0" data-target="#Study"><i class="far fa-list-ul"></i>Study Activities</li>
-				<li tabindex="0" data-target="#FAQ"><i class="far fa-question"></i>FAQs</li>
-			</ul>
-		</div>
+	</div>
 
-		<div class="container-fluid">
-			<img class="img-rc" src="images/oranges.png" alt="" >
+	<div class="menu-buttons">
+		<ul class="menu-buttons-list">
+			<li tabindex="0" data-target="#About"><i class="far fa-info-circle"></i>About</li>
+			<li tabindex="0" data-target="#Study"><i class="far fa-list-ul"></i>Study Activities</li>
+			<li tabindex="0" data-target="#FAQ"><i class="far fa-question"></i>FAQs</li>
+		</ul>
+	</div>
 
-
-			<img class="img-r" src="images/bananas.png" alt="" >
-		</div>
+	<div class="container-fluid">
+		<img class="img-rc" src="images/oranges.png" alt="" >
 
 
-		<div id="About" class="container-fluid">
+		<img class="img-r" src="images/bananas.png" alt="" >
+	</div>
+
+	<section class="block10">
+		<div id="About" class="container-fluid heros">
 
 			<div class="container">
 				<h2 class="landing-sec-H">About</h2>
@@ -290,8 +315,11 @@
 			</div>
 
 		</div>
+	</section>
 
-		<div id="Study" class="container-fluid">
+
+	<section class="block5">
+		<div id="Study" class="container-fluid heros">
 
 			<div class="container">
 				<h2 class="landing-sec-H">Study Activities</h2>
@@ -302,7 +330,7 @@
 
 						<li class="guide">
 
-							<div class="guide-wrapper">
+							<div class="guide-wrapper left">
 								<img class="guide-list-I" src="images/webinar.svg" alt="" />
 
 								<p class="guide-list-T text--blue">1. Attend a study overview webinar and a food purchase data submission webinar</p>
@@ -310,7 +338,7 @@
 						</li>
 						<li class="guide">
 
-							<div class="guide-wrapper">
+							<div class="guide-wrapper right">
 								<p class="guide-list-T text--blue">2. Complete the web-based Survey of Food Purchase Practices.<br>
 									<b>Survey <i class="far fa-file-pdf"></i> | Q program data <i class="far fa-file-pdf"></i></b>
 								</p>
@@ -319,7 +347,7 @@
 						</li>
 						<li class="guide">
 
-							<div class="guide-wrapper">
+							<div class="guide-wrapper left">
 								<img class="guide-list-I" src="images/submit.svg" alt="" />
 
 								<p class="guide-list-T text--blue">3. Submit detailed food purchase records for one quarter. SFAs may upload velocity reports, vendor invoices, or vendor summaries. <b>Example report <i class="far fa-images"></i></b></p>
@@ -327,7 +355,7 @@
 						</li>
 						<li class="guide">
 
-							<div class="guide-wrapper">
+							<div class="guide-wrapper right">
 
 								<p class="guide-list-T text--blue">4. Once consolidated by Westat, review the purchase summaries and flag foods used in reimbursable meals and a la carte.</p>
 								<img class="guide-list-I" src="images/money.svg" alt="" />
@@ -336,7 +364,7 @@
 
 						<li class="guide">
 
-							<div class="guide-wrapper">
+							<div class="guide-wrapper left">
 								<img class="guide-list-I" src="images/quarter.svg" alt="" />
 								<p class="guide-list-T text--blue">5. Complete the short web-based Quarterly Program Data Survey.</p>
 
@@ -357,11 +385,11 @@
 
 		</div>
 
+	</section>
 
 
-
-
-		<div id="FAQ" class="container-fluid">
+	<section class="block20">
+		<div id="FAQ" class="container-fluid heros">
 			<div class="container">
 				<h2 class="landing-sec-H alt">FAQs</h2>
 
@@ -391,8 +419,8 @@
 						<div id="accord2" class="panel-collapse collapse" data-parent="#accordion">
 							<div class="card-body ans">
 								<p>USDA is conducting this study to obtain updated national estimates of food acquisitions and a description and analysis of food purchase practices of SFAs in the school meal programs. The estimates will provide information on the type, volume and source of foods acquired (USDA Foods and commercial products), the relative importance of USDA Foods, and changes in food acquisitions and costs over time. </p>
-								<p>The results will provide current information about how Federally sponsored school meal programs are operating since the last study more than 10 years ago. Information about food buying eiciencies will be useful for SFAs as they strive to maximize available resources and improve food service operations. Food purchase data may also be used to help determine future USDA Foods oerings.</p>
-								<p>The study will supplement data provided by SFAs with those gathered from State Directors (State Distributing Agencies). Additional information about this study is available at <a href="http://purchasestudy.com/" target="_blank">www.PurchaseStudy.com</a></p>
+								<p>The results will provide current information about how Federally sponsored school meal programs are operating since the last study more than 10 years ago. Information about food buying efficiencies will be useful for SFAs as they strive to maximize available resources and improve food service operations. Food purchase data may also be used to help determine future USDA Foods offerings</p>
+								<p>The study will supplement data provided by SFAs with those gathered from State Directors (State Distributing Agencies). Additional information about this study is available at <a class="link" href="http://purchasestudy.com/" target="_blank"><b>www.PurchaseStudy.com</b></a></p>
 							</div>
 						</div>
 					</div>
@@ -423,7 +451,7 @@
 							<div class="card-body ans">
 								<p>While the participation of individuals in the study is voluntary, the Healthy, Hunger-Free Kids Act of 2010 requires SFAs participating in the school meal programs to cooperate with USDA studies:</p>
 								<p>“States, State educational agencies, local educational agencies, schools, institutions, facilities, and contractors participating in programs authorized under this Act and the Child Nutrition Act of 1966 (42 U.S.C 1771 et seq.) shall cooperate with oicials and contractors acting on behalf of the Secretary, in the conduct of evaluations and studies under those Acts.”</p>
-								<p>We understand that your time is valuable. The data collection activities are carefully designed and were pretested so that the required information can be provided with minimal burden to you and your sta.</p>
+								<p>We understand that your time is valuable. The data collection activities are carefully designed and were pretested so that the required information can be provided with minimal burden to you and your state.</p>
 
 							</div>
 						</div>
@@ -440,7 +468,7 @@
 								<p>As a study participant, you will be asked to:</p>
 								<ul>
 									<li>Participate in a Study Overview Webinar or view the webinar recording available on the study website. This 1-hour webinar will review study activities and how study results are used, prepare you to complete the study survey, and review the various study resources available to support you</li>
-									<li>Complete an online Survey of Food Purchase Practices at the beginning of the study in SY 2020-2021. The survey will take about 90 minutes to complete. We will provide you with a list of documents you will need to complete the survey, and a PDF copy of the Survey for reference. You can complete the survey in multiple sessions and resume from where you left off.</li>
+									<li>Complete an online Survey of Food Purchase Practices at the beginning of the study in SY 2020-2021. The survey will take about 90 minutes to complete. We will provide you with a list of documents you will need to complete the survey, and a PDF copy of the Survey for reference. You can complete the survey in multiple sessions and resume from where you left off.</li>
 
 									<li>Participate in a Food Purchase Data Webinar or view the webinar recording available on the study website. This 1-hour webinar will provide information on the data elements needed for the food purchase study, provide examples, and include time to address questions from SFAs.</li>
 									<li>Submit details for food purchases made in one quarter along with meal counts and total food expenditure and revenue data for the same quarter. Depending on your recordkeeping systems, this activity will take about 5 hours. You can upload multiple files in a form that is easiest for you.</li>
@@ -458,7 +486,7 @@
 						<div id="accord6" class="panel-collapse collapse" data-parent="#accordion">
 							<div class="card-body ans">
 
-								<p>This study has been approved by the Oice of Management and Budget (OMB), the oice that reviews all Federally-sponsored surveys. The OMB approval number for this study is 0584-0471.</p>
+								<p>This study has been approved by the Office of Management and Budget (OMB), the office that reviews all Federally-sponsored surveys. The OMB approval number for this study is 0584-0471.</p>
 								<p>The study also has been approved by committees that protect human research subjects at Westat.</p>
 								<p>The School Nutrition Association (SNA) and the American Commodity Distribution Association (ACDA) provided letters of support for the study.</p>
 							</div>
@@ -491,7 +519,7 @@
 						</a>
 						<div id="accord8" class="panel-collapse collapse" data-parent="#accordion">
 							<div class="card-body ans">
-								<p>We will mail your SFA a check for $300 aer you have completed all study activities. We encourage you to use it towards attendance at a conference or other professional development activities. </p>
+								<p>We will mail your SFA a check for $300 after you have completed all study activities. We encourage you to use it towards attendance at a conference or other professional development activities. </p>
 							</div>
 						</div>
 					</div>
@@ -558,43 +586,43 @@
 
 				</div>
 			</div>
+		</section>
+		<div class="container-fluid">
+			<img class="img-left2" src="images/food.png" alt="">
 
-			<div class="container-fluid">
-				<img class="img-left2" src="images/food.png" alt="">
-
-			</div>
-
-
-			<div class="menu-buttons-floating">
-				<ul class="menu-buttons-floating-list">
-					<li tabindex="0" data-target="#Home"><i class="fas fa-angle-up"></i></li>
-					<li tabindex="0" data-target="#About"><i class="far fa-info-circle"></i></li>
-					<li tabindex="0" data-target="#Study"><i class="far fa-list-ul"></i></li>
-					<li tabindex="0" data-target="#FAQ"><i class="far fa-question"></i></li>
-
-				</ul>
-			</div>
-
-			<div class="survey-footer">
-				<p class="white mb-0">Exp. MM/DD/YYYY</p>
-
-			</div>
 		</div>
 
-		<div class="menu-buttons-768">
-			<ul class="menu-buttons-768-list">
 
-				<li tabindex="0" data-target="#About"><i class="far fa-info-circle"></i><span>About</span></li>
-				<li tabindex="0" data-target="#Study"><i class="far fa-list-ul"></i><span>Study<br>Activities</span></li>
-				<li tabindex="0" data-target="#FAQ"><i class="far fa-question"></i><span>FAQ</span></li>
-				<li tabindex="0" data-target="#Home"><i class="fas fa-angle-up"></i><span>TOP</span></li>
+		<div class="menu-buttons-floating">
+			<ul class="menu-buttons-floating-list">
+				<li tabindex="0" data-target="#Home"><i class="fas fa-angle-up"></i></li>
+				<li tabindex="0" data-target="#About"><i class="far fa-info-circle"></i></li>
+				<li tabindex="0" data-target="#Study"><i class="far fa-list-ul"></i></li>
+				<li tabindex="0" data-target="#FAQ"><i class="far fa-question"></i></li>
+
 			</ul>
 		</div>
 
-		<script type="text/javascript" src="vendorlibs/jquery.min.js"></script>
-		<script type="text/javascript" src="vendorlibs/bootstrap/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
-		<script type="text/javascript" src="js/index.js"></script>
-	</body>
+		<div class="survey-footer">
+			<p class="white mb-0">Exp. MM/DD/YYYY</p>
 
-	</html>
+		</div>
+	</div>
+
+	<div class="menu-buttons-768">
+		<ul class="menu-buttons-768-list">
+
+			<li tabindex="0" data-target="#About"><i class="far fa-info-circle"></i><span>About</span></li>
+			<li tabindex="0" data-target="#Study"><i class="far fa-list-ul"></i><span>Study<br>Activities</span></li>
+			<li tabindex="0" data-target="#FAQ"><i class="far fa-question"></i><span>FAQ</span></li>
+			<li tabindex="0" data-target="#Home"><i class="fas fa-angle-up"></i><span>TOP</span></li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="vendorlibs/jquery.min.js"></script>
+	<script type="text/javascript" src="vendorlibs/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

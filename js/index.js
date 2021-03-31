@@ -91,11 +91,164 @@ $('#close').keypress(
   close
 );
 
+if ($(document).innerWidth() > 767) {
+  $(window).on('scroll', function() {
+    var screenTop = $(window).scrollTop();
+    var screenBottom = $(window).scrollTop() + window.innerHeight;
+
+    $('section').each(function() {
+      var elementTop = $(this).offset().top;
+      var elementBottom = $(this).offset().top + $(this).outerHeight();
+
+      if ((screenBottom > elementTop + ($(this).find('.heros').height() / 3 )) && (screenTop < elementBottom)) {
+        $('section').removeClass('active')
+        $(this).addClass('active')
+      }
+      else {
+        $(this).removeClass('active')
+      }
+    })
 
 
+    if ($('.block10').hasClass('active')) {
+      $('.menu-buttons-floating-list li:eq(1)').addClass('focused')
+
+    }
+
+    else {
+      $('.menu-buttons-floating-list li:eq(1)').removeClass('focused')
+
+    }
 
 
+    if ($('.block5').hasClass('active')) {
+      $('.menu-buttons-floating-list li:eq(2)').addClass('focused')
+    
+  }
 
+  else {
+    $('.menu-buttons-floating-list li:eq(2)').removeClass('focused')
+
+  }
+
+  if ($('.block20').hasClass('active')) {
+    $('.menu-buttons-floating-list li:eq(3)').addClass('focused')
+
+  }
+
+  else {
+    $('.menu-buttons-floating-list li:eq(3)').removeClass('focused')
+
+  }
+
+
+  if ($('.block50').hasClass('active')) {
+    $('.menu-buttons-floating-list li:eq(4)').addClass('focused')
+
+  }
+
+  else {
+    $('.menu-buttons-floating-list li:eq(4)').removeClass('focused')
+
+  }
+
+  if ($('.block0').hasClass('active')) {
+    $('.menu-buttons-floating-list li:eq(0)').removeClass('focused')
+    $('.menu-buttons-floating-list li:eq(1)').removeClass('focused')
+    $('.menu-buttons-floating-list li:eq(2)').removeClass('focused')
+    $('.menu-buttons-floating-list li:eq(3)').removeClass('focused')
+
+
+  }
+
+})
+
+
+}
+
+
+if ($(document).innerWidth() <= 767) {
+
+  $(window).on('scroll', function() {
+    var screenTop = $(window).scrollTop();
+    var screenBottom = $(window).scrollTop() + window.innerHeight;
+
+    $('section').each(function() {
+      var elementTop = $(this).offset().top;
+      var elementBottom = $(this).offset().top + $(this).outerHeight();
+
+      if ((screenBottom > elementTop + ($(this).find('.heros').height() / 5 )) && (screenTop < elementBottom)) {
+        $('section').removeClass('active')
+        $(this).addClass('active')
+      }
+      else {
+        $(this).removeClass('active')
+      }
+    })
+
+    if ($('.block10').hasClass('active')) {
+
+      $('.menu-buttons-768-list li:eq(0)').addClass('focused')
+    }
+
+    else {
+
+      $('.menu-buttons-768-list li:eq(0)').removeClass('focused')
+    }
+
+
+    if ($('.block5').hasClass('active')) {
+
+      $('.menu-buttons-768-list li:eq(1)').addClass('focused')
+    }
+
+    else {
+
+      $('.menu-buttons-768-list li:eq(1)').removeClass('focused')
+    }
+
+
+    if ($('.block20').hasClass('active')) {
+
+      $('.menu-buttons-768-list li:eq(2)').addClass('focused')
+    }
+
+    else {
+
+      $('.menu-buttons-768-list li:eq(2)').removeClass('focused')
+    }
+
+
+    if ($('.block50').hasClass('active')) {
+
+      $('.menu-buttons-768-list li:eq(3)').addClass('focused')
+    }
+
+    else {
+
+      $('.menu-buttons-768-list li:eq(3)').removeClass('focused')
+    }
+
+
+    if ($('.block0').hasClass('active')) {
+
+      $('.menu-buttons-768-list li:eq(0)').removeClass('focused')
+      $('.menu-buttons-768-list li:eq(1)').removeClass('focused')
+      $('.menu-buttons-768-list li:eq(2)').removeClass('focused')
+      $('.menu-buttons-768-list li:eq(3)').removeClass('focused')
+      $('.menu-buttons-768-list li:eq(4)').removeClass('focused')
+    }
+
+
+  })
+
+
+  $('.landing-panel .form-control.access').focus(function () {
+    $('html, body').animate({ scrollTop: ($('.landing-panel .form-control.access').offset().top - 40) }, 600);
+    return false;
+  });
+
+}
 
 //validate and send message on contact form and toast message
 
@@ -118,7 +271,7 @@ $("#theform").validate(
   $('#theform input').keydown(function (event) {
     if(!$('#formControl1').val() == '' && !$('#formControl2').val() == '' )  {
 
-      $('#sendMessage').addClass('activated').removeClass('inactive')
+      $('#sendMessage').addClass('focused').removeClass('inactive')
 
 
     }
@@ -272,24 +425,24 @@ $("#theform").validate(
 
 
 
-  $('.radio-inline input').on('keyup', function(e) {
+  $('#slideOut input').on('keyup', function(e) {
 
     var code = (e.keyCode ? e.keyCode : e.which);
     if (code == 9 ) {
 
-      $('.radio-inline input').change(function (e) {
+      $('#slideOut input').change(function (e) {
 
         setReasonActive();
 
       })
 
       function setReasonActive() {
-        $('.radio-inline input').each(function () {
+        $('#slideOut input').each(function () {
           if ($(this).prop('checked')) {
-            $(this).parents('.vertical').css('background' ,'#0a5799');
+            $(this).parents('.form-check').css('background' ,'#0a5799');
 
           } else {
-            $(this).parents('.vertical').css( 'background' ,'transparent')
+            $(this).parents('.form-check').css( 'background' ,'transparent')
           }
         })
       }
@@ -304,26 +457,39 @@ $("#theform").validate(
 
 
 
-  $('.radio-inline input').change(function (e) {
+  $('#slideOut input').change(function (e) {
 
     setReasonActive();
 
   })
 
   function setReasonActive() {
-    $('.radio-inline input').each(function () {
+    $('#slideOut input').each(function () {
       if ($(this).prop('checked')) {
-        $(this).closest('.vertical').find('i').css('color', '#BEF381')
-        $(this).parents('.vertical').css('background' ,'#0a5799');
+        $(this).closest('.form-check').find('i').css('color', '#BEF381')
+        $(this).parents('.form-check').css('background' ,'#0a5799');
 
       } else {
-        $(this).parents('.vertical').css( 'background' ,'transparent')
-        $(this).closest('.vertical').find('i').css('color', 'white')
+        $(this).parents('.form-check').css( 'background' ,'transparent')
+        $(this).closest('.form-check').find('i').css('color', 'white')
       }
     })
   }
 
   setReasonActive()
+
+
+  $(".form-check").on("keyup", function (e) {
+
+    var code = (e.keyCode ? e.keyCode : e.which);
+    if (code == 9) {
+      $('.form-check').each(function() {
+        $(this).addClass('focusClass')
+      });
+
+    }
+
+  })
 
 
 

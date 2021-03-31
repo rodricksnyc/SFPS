@@ -180,7 +180,7 @@ h1{
 }
 
 .form-signin-heading{
-  color: #2C5282;
+  color: black;
   position: absolute;
   top: -11px;
   left: 10px;
@@ -245,7 +245,7 @@ h1{
 
 .menu-buttons {
   width: 475px;
-  margin: -305px auto 95px;
+  margin: -280px auto 95px;
   position: relative;
 }
 
@@ -278,6 +278,10 @@ h1{
   line-height: 1.1;
   padding-top: 7%;
 
+}
+
+.menu-buttons-list li:nth-last-child(2){
+  padding-top:22px;
 }
 
 .menu-buttons-list li a {
@@ -314,6 +318,18 @@ h1{
   100% {
     transform: rotateY(0deg);
   }
+}
+
+
+.black{
+  font-size:13px;
+  line-height: 1.1;
+  color:black !important;
+  padding:.3em 0em 0em 0em
+}
+
+.link{
+  color: #1073BA;
 }
 
 .btnContact {
@@ -373,7 +389,7 @@ h1{
 
 h3{
   color: #2C5282;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .embed-responsive-item {
@@ -467,14 +483,14 @@ label.error {
 }
 
 .whiteBubble {
-  padding: 1em 1.5em;
+  padding: 1.75em;
   background-color: white !important;
   position: relative;
   -webkit-box-shadow: 0px 0px 15px 2px rgb(191 210 223);
   -moz-box-shadow: 0px 0px 15px 2px rgba(191,210,223,1);
   box-shadow: 0px 0px 14px 2px rgb(191 210 223);
   z-index: 25;
-  border-radius: .5rem;
+  border-radius: 1rem;
   margin-bottom: 5em;
 }
 
@@ -561,11 +577,13 @@ label.error {
   background:#1073BA;
   color:white;
   position: absolute;
-  width:16rem;
-  font-size:22px;
-  padding:.25rem 1rem;
-  left:calc(50% - 8rem);
+  width: 18rem;
+  font-size: 22px;
+  padding: .4rem 2rem;
+  left: calc(50% - 9rem);
   border-radius: 2rem;
+
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -713,6 +731,7 @@ label.error {
   margin: 0;
   padding-left: 20px;
   text-indent: -20px;
+  font-weight: 600;
 }
 
 .guide-list-T i {
@@ -722,6 +741,14 @@ label.error {
 .guide-list-I {
   width: 40%;
   height: 150px;
+}
+
+.left .guide-list-T.text--blue{
+  margin-right:5%
+}
+
+.right .guide-list-T.text--blue{
+  margin-left:5%
 }
 
 .guide-list-H{
@@ -866,14 +893,15 @@ label.error {
 
 }
 
-
+/*
 .menu-buttons-floating-list li:last-child {
-  font-size: 32px;
-  padding-top: 0px;
-}
+font-size: 32px;
+padding-top: 0px;
+} */
 
 .menu-buttons-floating-list li:hover,
 .menu-buttons-floating-list li:focus,
+.menu-buttons-floating-list li.focused,
 .btn-guide:hover,
 .btn-guide:focus {
   outline: none;
@@ -881,7 +909,8 @@ label.error {
   transform: scale(1.2) !important;
 }
 
-.menu-buttons-768-list li:focus{
+.menu-buttons-768-list li:focus,
+.menu-buttons-768-list li.focused{
   background: #7AC43D;
 }
 
@@ -942,6 +971,10 @@ label.error {
   position: relative;
 }
 
+#accordion{
+  padding:0em .6em
+}
+
 h4 {
   color: #1073BA;
   font-size: 1.25em;
@@ -958,7 +991,7 @@ h5 {
 h2 {
   color: #1073BA;
   font-size: 2em;
-
+  font-weight: 700;
 }
 
 
@@ -1010,6 +1043,76 @@ h2 {
   font-size: 12px;
   font-weight: 600;
 }
+#slideOut .form-check {
+  position: relative;
+  margin-left: 0em;
+
+  padding-left: 0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:.6em .2em;
+  border-radius: .5rem;
+}
+
+#slideOut .form-check input {
+  height: 18px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 18px;
+}
+#slideOut .form-check label {
+  padding: 6px 7px;
+  font-size: 16px !important;
+  font-weight: 400;
+
+}
+#slideOut .form-check label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 0px;
+
+  padding-left: 24px !important;
+}
+
+#slideOut .form-check input + label::before {
+  border: 1px solid white;
+  content: "";
+  height: 14px;
+  left: 6px;
+  position: absolute;
+  top: 46px;
+  width: 14px;
+  border-radius: 50%;
+  background: white;
+}
+
+#slideOut .form-check input + label::after {
+  content: "";
+  opacity: 0;
+  border: 5px solid #7AC43D;
+  border-radius: 50%;
+  position: absolute;
+  left: 8px;
+  top: 48px;
+  color: black;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#slideOut .form-check input:checked + label::after {
+  opacity: 1;
+}
+
+.form-check i{
+  font-size:24px
+}
+
+.focusClass input:focus + label::before {
+  box-shadow: 0 0 0 3px red;
+  outline: 3px solid transparent; /* For Windows high contrast mode. */
+}
 
 
 
@@ -1031,7 +1134,7 @@ h2 {
 
 #one {
   text-align: center;
-  top: 300px;
+  top: 200px;
   position: fixed;
   right: -47px;
   z-index: 99999;
@@ -1157,7 +1260,7 @@ h2 {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 1em;
   width: 100%;
 }
@@ -1314,6 +1417,8 @@ input[type=radio] {
   .around{
     flex-direction: column;
     flex-flow: wrap;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   img.about {
