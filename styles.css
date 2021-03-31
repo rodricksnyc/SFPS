@@ -1650,7 +1650,7 @@ input[type=radio] {
 
   .ans {
     font-size: 16px;
-    padding: 0px;
+    padding: 0em 1em;
     font-weight: 300;
   }
 
