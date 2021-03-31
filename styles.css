@@ -1654,6 +1654,10 @@ input[type=radio] {
     font-weight: 300;
   }
 
+  .caret-down{
+    font-size:34px !important
+  }
+
   .help-P {
     font-size: 16px;
   }
